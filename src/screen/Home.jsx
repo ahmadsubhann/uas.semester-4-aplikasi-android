@@ -3,11 +3,9 @@ import React from 'react'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Data =[
-  {id: 1, namaIcon: 'alpha-g-circle', judulIcon:'gratis ongkir'},
-  {id: 2, namaIcon: 'truck-delivery', judulIcon:'cod'},
-  {id: 4, namaIcon: 'home', judulIcon:'home'},
-  {ID: 5, namaIcon: 'package-variant-closed', judulIcon:'barang'},
-
+  {id: 1, namaIcon: 'camera-enhance', judulIcon:'edit foto'}, 
+  {id: 2, namaIcon: 'video', judulIcon:'Edit Video'},
+ 
 ];
 
 const Home = () => {

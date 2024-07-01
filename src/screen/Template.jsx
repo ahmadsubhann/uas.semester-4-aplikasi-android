@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Contact = () => {
+const Template = () => {
   return (
     <View>
-      <Text>Contact</Text>
+      <Text>Template</Text>
     </View>
   )
 }
 
-export default Contact
+export default Template
 
 const styles = StyleSheet.create({})

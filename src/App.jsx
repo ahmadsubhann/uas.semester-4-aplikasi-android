@@ -5,7 +5,7 @@ import Home from './screen/Home';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Contact from './screen/Contact';
+import Template from './screen/Template';
 
 const Tab = createBottomTabNavigator();
 
@@ -28,10 +28,10 @@ const App = () => {
       
       }} />
 
-     <Tab.Screen name='Contact' component={Contact} options={{
-          tabBarLabel: 'Contacts',
+     <Tab.Screen name='Template' component={Template} options={{
+          tabBarLabel: 'Template',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="contacts" color={color} size={26} />
+            <MaterialCommunityIcons name="lightning-bolt" color={color} size={26} />
           ),
       
       }} />
