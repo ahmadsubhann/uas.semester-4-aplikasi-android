@@ -1,17 +1,20 @@
+import 'react-native-gesture-handler'
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import Profil from './screen/Profil';
 import Home from './screen/Home';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Template from './screen/Template';
+import Edit from './screen/Edit';
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
-const App = () => {
-  return (
-    <NavigationContainer>
+const BottomTab = () => {
+  return(
     <Tab.Navigator>
       <Tab.Screen name='Home' component={Home} options={{
           tabBarLabel: 'Home',
@@ -37,6 +40,18 @@ const App = () => {
       }} />
 
     </Tab.Navigator>
+  )
+}
+
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name='root' component={BottomTab} options={{
+          headerShown: false
+        }} />
+        <Stack.Screen name='Edit' component={Edit} />
+      </Stack.Navigator>
    </NavigationContainer>
   );
 };

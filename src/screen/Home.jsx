@@ -8,14 +8,16 @@ const Data =[
  
 ];
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <View style={{padding:20}}>
       <FlatList
       data={Data}
       horizontal={true}
       renderItem={({item}) => (
-      <TouchableOpacity style={{width:50, marginRight:35}}>
+      <TouchableOpacity style={{width:50, marginRight:35}} onPress={() => {
+        navigation.navigate("Edit")
+      }}>
         <View style={{width:50, height:50, backgroundColor:'gray', borderRadius:10, alignItems:'center', justifyContent:'center'}}>
           <MaterialCommunityIcons name={item.namaIcon} color='white' size={30} />
         </View>
